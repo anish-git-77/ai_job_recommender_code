@@ -111,13 +111,13 @@ def load_jobs(csv_path: str) -> pd.DataFrame:
 # ─────────────────────────────────────────────
 # 4. EMBEDDING ENGINE (SentenceTransformers)
 # ─────────────────────────────────────────────
-
-class JobRecommender:
+ 
+class JobRecommender: 
     """
     Core AI recommendation engine.
-    - Loads a SentenceTransformer model
-    - Encodes job descriptions into vectors
-    - Uses FAISS for fast nearest-neighbour search
+    - Loads a SentenceTransformer model 
+    - Encodes job descriptions into vectors 
+    - Uses FAISS for fast nearest-neighbour search 
     """
 
     MODEL_NAME = "all-MiniLM-L6-v2"   # Fast, lightweight, good quality
