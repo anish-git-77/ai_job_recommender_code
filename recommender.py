@@ -4,7 +4,7 @@ Uses SentenceTransformers + FAISS for semantic job matching
 """
 
 import os
-import re
+import re  
 import pickle
 import numpy as np
 import pandas as pd
@@ -32,24 +32,24 @@ def extract_text_from_pdf(pdf_path: str) -> str:
 
 
 def extract_text_from_txt(txt_path: str) -> str:
-    """Extract text from a plain .txt resume."""
+    """Extract text from a plain .txt resume."""  
     try:
-        with open(txt_path, "r", encoding="utf-8", errors="ignore") as f:
+        with open(txt_path, "r", encoding="utf-8", errors="ignore") as f: 
             return f.read().strip()
-    except Exception as e:
+    except Exception as e: 
         print(f"[ERROR] Could not read TXT: {e}")
-        return ""
+        return "" 
 
 
 def extract_resume_text(file_path: str) -> str:
     """Auto-detect file type and extract resume text."""
     ext = os.path.splitext(file_path)[1].lower()
     if ext == ".pdf":
-        return extract_text_from_pdf(file_path)
+        return extract_text_from_pdf(file_path) 
     elif ext in [".txt", ".text"]:
         return extract_text_from_txt(file_path)
-    else:
-        return ""
+    else: 
+        return "" 
 
 
 # ─────────────────────────────────────────────
