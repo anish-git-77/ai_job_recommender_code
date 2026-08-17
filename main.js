@@ -10,7 +10,7 @@ function switchTab(tab) {
     document.querySelectorAll('.tab')[1].classList.add('active');
     document.getElementById('tab-text').classList.add('active');
   }
-}
+}   
 
 /* ── Drag & drop ────────────────────────────── */
 let selectedFile = null;
