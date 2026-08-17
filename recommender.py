@@ -6,7 +6,7 @@ Uses SentenceTransformers + FAISS for semantic job matching
 import os
 import re     
 import pickle
-import numpy as np
+import numpy as np  
 import pandas as pd
 import faiss
 import fitz  # PyMuPDF
