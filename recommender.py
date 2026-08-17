@@ -4,7 +4,7 @@ Uses SentenceTransformers + FAISS for semantic job matching
 """
 
 import os
-import re  
+import re     
 import pickle
 import numpy as np
 import pandas as pd
