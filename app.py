@@ -1,7 +1,7 @@
 """
 Flask Web App – AI Job Recommendation System
 Run:  python app.py
-"""  
+"""     
 
 import os
 from flask import Flask, render_template, request, jsonify, redirect, url_for
