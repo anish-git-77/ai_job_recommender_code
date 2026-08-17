@@ -3,7 +3,7 @@ AI Job Recommendation Engine
 Uses SentenceTransformers + FAISS for semantic job matching
 """
 
-import os
+import os  
 import re     
 import pickle
 import numpy as np  
@@ -100,7 +100,7 @@ def load_jobs(csv_path: str) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
     # Create a rich combined text for each job (used for embedding)
     df["combined_text"] = (
-        df["title"].fillna("") + ". " +
+        df["title"].fillna("") + ". " +  
         df["description"].fillna("") + ". " +
         "Required skills: " + df["skills"].fillna("") + ". " +
         "Level: " + df["experience_level"].fillna("")
