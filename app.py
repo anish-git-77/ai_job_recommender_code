@@ -2,9 +2,9 @@
 Flask Web App – AI Job Recommendation System
 Run:  python app.py
 """     
-
+    
 import os
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for   
 from werkzeug.utils import secure_filename
 from recommender import JobRecommender, extract_resume_text, extract_skills_from_text
 
