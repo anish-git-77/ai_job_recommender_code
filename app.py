@@ -71,11 +71,11 @@ def upload_resume():
     # Extract text & get profile
     resume_text = extract_resume_text(save_path)
     if not resume_text:
-        return jsonify({"error": "Could not extract text from the file. Make sure it is a readable PDF or TXT."}), 400
+        return jsonify({"error": "Could not extract text from the file. Make sure it is a readable PDF or TXT."}), 400   
 
     profile      = recommender.get_resume_profile(resume_text)
     jobs         = recommender.recommend_from_file(save_path, top_k=top_k)
-
+   
     # Clean up uploaded file
     os.remove(save_path)
 
