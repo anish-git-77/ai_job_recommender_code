@@ -64,7 +64,7 @@ def upload_resume():
     if not allowed_file(file.filename):
         return jsonify({"error": "Only PDF and TXT files are supported"}), 400
 
-    filename = secure_filename(file.filename)
+    filename = secure_filename(file.filename)  
     save_path = os.path.join(app.config["UPLOAD_FOLDER"], filename)
     file.save(save_path)
 
