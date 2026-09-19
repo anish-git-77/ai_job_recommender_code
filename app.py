@@ -54,7 +54,7 @@ def upload_resume():
     """Handle file upload and return job recommendations."""
     top_k = int(request.form.get("top_k", 5))
 
-    if "resume" not in request.files:
+    if "resume" not in request.files:  
         return jsonify({"error": "No file part in request"}), 400
 
     file = request.files["resume"]
