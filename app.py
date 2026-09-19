@@ -94,7 +94,7 @@ def recommend_text():
     """Handle plain-text resume / skills input."""
     data      = request.get_json(silent=True) or {}
     user_text = data.get("text", "").strip()
-    top_k     = int(data.get("top_k", 5))
+    top_k     = int(data.get("top_k", 5))      
 
     if not user_text:
         return jsonify({"error": "Please provide some text describing your skills or experience"}), 400
