@@ -49,7 +49,7 @@ def index():
 
 # ── Upload resume (PDF / TXT) ─────────────────
 
-@app.route("/upload", methods=["POST"])
+@app.route("/upload", methods=["POST"])       
 def upload_resume():
     """Handle file upload and return job recommendations."""
     top_k = int(request.form.get("top_k", 5))
